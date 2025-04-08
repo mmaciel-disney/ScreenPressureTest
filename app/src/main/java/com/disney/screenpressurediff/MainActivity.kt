@@ -23,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         screenPressure = findViewById(R.id.tvScreenPressure)
     }
 
+    /**
+     * Update UI with the pressure value
+     */
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         screenPressure.text = ev.pressure.toString()
         return super.dispatchTouchEvent(ev)
