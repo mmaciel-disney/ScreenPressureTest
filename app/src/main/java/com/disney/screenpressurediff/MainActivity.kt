@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
      */
     override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
         screenPressure.text = ev.pressure.toString()
+        if (ev.action == MotionEvent.ACTION_UP) {
+            screenPressure.text = "0.0"
+        }
         return super.dispatchTouchEvent(ev)
     }
 }
